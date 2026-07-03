@@ -48,37 +48,98 @@ const BIZ = {
   hoursText: "Open daily · 8:00am – 9:00pm",
 };
 
+
+
 const waLink = (text) => `https://wa.me/${BIZ.waNumber}?text=${encodeURIComponent(text)}`;
+// Unsplash direct CDN URLs (free commercial use license) — resized/cropped server-side
+// so the same img(id, w, h) signature works exactly like your old picsum helper
+const img = (id, w = 800, h = 1000) =>
+  `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&fit=crop&crop=entropy&auto=format&q=80`;
+
+// Curated real photo IDs per category
+const CHICKEN_IDS = [
+  "1587593810167-a84920ea0781",
+  "1682991136736-a2b44623eeba",
+  "1672787153720-e85fe802fd9f",
+  "1633096013004-e2cb4023b560",
+  "1642102903996-cdad15f5dcdd",
+  "1642497394469-188b0f4bcae6",
+  "1672787153652-b3b9d92f3e8c",
+  "1642102904019-2eb4c4d2b492",
+  "1642102903909-560c5a7665bf",
+];
+
+const FISH_IDS = [
+  "1615141982883-c7ad0e69fd62",
+  "1563557908-b7787229f123",
+  "1498654200943-1088dd4438ae",
+  "1611214774777-3d997a9d0e35",
+  "1517115358639-5720b8e02219",
+  "1499125562588-29fb8a56b5d5",
+  "1510130387422-82bed34b37e9",
+  "1554071407-1fb7259a9118",
+  "1567087978459-8a8eeac7bc75",
+  "1674066620888-4878aad91094",
+];
+
+const MUTTON_IDS = [
+  "1690983323238-0b91789e1b5a",
+  "1690983321750-ad6f6d59a84b",
+  "1690983325551-b922137727be",
+  "1613454320437-0c228c8b1723",
+  "1632154023554-c2975e9be348",
+  "1690983330536-3b0089d07cf9",
+  "1678127095367-f776ac0601bc",
+];
+
+const PORK_IDS = [
+  "1571067224158-622a54542fed",
+  "1666013942642-b7b54ecafd7d",
+  "1607623814075-e51df1bdc82f",
+  "1606677661991-446cea8ee182",
+  "1604503468506-a8da13d82791",
+  "1690983329845-638ec321647d",
+];
+
+const BAMBOO_IDS = [
+  "1764516522928-ae29d67e7efa",
+  "1724429427088-aa44f2e867a0",
+  "1684322378272-383f146e2e73",
+  "1758202416825-666ace6d2241",
+];
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
 /* ------------------------------------------------------------------ */
 
-const img = (seed, w = 800, h = 1000) => `https://picsum.photos/seed/${seed}/${w}/${h}`;
 
 const CATEGORIES = [
-  { id: "chicken", name: "Chicken", count: "18 cuts available", images: [img("chick1", 700, 860), img("chick2", 700, 860), img("chick3", 700, 860)] },
-  { id: "fish", name: "Fish", count: "22 varieties", images: [img("fish1", 700, 860), img("fish2", 700, 860), img("fish3", 700, 860)] },
-  { id: "mutton", name: "Mutton", count: "14 cuts available", images: [img("mut1", 700, 860), img("mut2", 700, 860)] },
-  { id: "pork", name: "Pork", count: "12 cuts available", images: [img("pork1", 700, 860), img("pork2", 700, 860)] },
-  { id: "bamboo", name: "Bamboo Shoot", count: "6 varieties", images: [img("bam1", 700, 860), img("bam2", 700, 860)] },
+  { id: "chicken", name: "Chicken", count: "18 cuts available", images: [img(CHICKEN_IDS[0], 700, 860), img(CHICKEN_IDS[1], 700, 860), img(CHICKEN_IDS[2], 700, 860)] },
+  { id: "fish", name: "Fish", count: "22 varieties", images: [img(FISH_IDS[0], 700, 860), img(FISH_IDS[1], 700, 860), img(FISH_IDS[2], 700, 860)] },
+  { id: "mutton", name: "Mutton", count: "14 cuts available", images: [img(MUTTON_IDS[0], 700, 860), img(MUTTON_IDS[1], 700, 860)] },
+  { id: "pork", name: "Pork", count: "12 cuts available", images: [img(PORK_IDS[0], 700, 860), img(PORK_IDS[1], 700, 860)] },
+  { id: "bamboo", name: "Bamboo Shoot", count: "6 varieties", images: [img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[1], 700, 860)] },
 ];
 
-const GALLERY = Array.from({ length: 8 }, (_, i) => img(`counter${i}`, 900, 1100));
-
+const GALLERY = [
+  img(CHICKEN_IDS[3], 900, 1100), img(FISH_IDS[3], 900, 1100),
+  img(MUTTON_IDS[2], 900, 1100), img(PORK_IDS[2], 900, 1100),
+  img(CHICKEN_IDS[4], 900, 1100), img(FISH_IDS[4], 900, 1100),
+  img(BAMBOO_IDS[2], 900, 1100), img(MUTTON_IDS[3], 900, 1100),
+];
 const PRODUCTS = [
-  { id: "p1", name: "Desi Country Chicken (Whole)", unit: "kg", price: 320, rating: 4.9, reviews: 264, badge: "Bestseller", desc: "Free-range desi chicken, cleaned and cut to order in front of you. Firmer texture and deeper flavour than broiler.", images: [img("dchick1", 700, 860), img("dchick2", 700, 860)] },
-  { id: "p2", name: "Boneless Chicken Breast", unit: "500g", price: 180, rating: 4.7, reviews: 188, badge: null, desc: "Skinless, boneless breast fillets trimmed fresh — ready straight into the pan.", images: [img("bchick1", 700, 860), img("bchick2", 700, 860)] },
-  { id: "p3", name: "Chicken Curry Cut (Skin-on)", unit: "kg", price: 240, rating: 4.8, reviews: 201, badge: null, desc: "Classic curry-style pieces, skin-on for a richer gravy. Cut to your preferred size on request.", images: [img("cchick1", 700, 860), img("cchick2", 700, 860)] },
-  { id: "p4", name: "Fresh Rohu Fish", unit: "kg", price: 260, rating: 4.7, reviews: 142, badge: "Fresh catch", desc: "Sourced daily from the local market, scaled and cleaned before it leaves our counter.", images: [img("rohu1", 700, 860), img("rohu2", 700, 860)] },
-  { id: "p5", name: "Pomfret (Silver)", unit: "kg", price: 650, rating: 4.8, reviews: 96, badge: "Fresh catch", desc: "Whole silver pomfret, firm-fleshed and mild — ideal for frying or steaming.", images: [img("pomfret1", 700, 860), img("pomfret2", 700, 860)] },
-  { id: "p6", name: "Mutton Curry Cut (Bone-in)", unit: "kg", price: 780, rating: 4.9, reviews: 231, badge: "Bestseller", desc: "Traditional bone-in curry cut for slow-cooked gravies with real depth of flavour.", images: [img("muttoncc1", 700, 860), img("muttoncc2", 700, 860)] },
-  { id: "p7", name: "Mutton Boneless", unit: "500g", price: 480, rating: 4.7, reviews: 118, badge: null, desc: "Hand-trimmed boneless mutton, ideal for kebabs, roasts or quick stir-fries.", images: [img("muttonbl1", 700, 860), img("muttonbl2", 700, 860)] },
-  { id: "p8", name: "Pork Curry Cut", unit: "kg", price: 380, rating: 4.8, reviews: 154, badge: null, desc: "Classic curry-cut pork with a good fat-to-meat ratio for slow-cooked dishes.", images: [img("porkcc1", 700, 860), img("porkcc2", 700, 860)] },
-  { id: "p9", name: "Pork Belly (Skin-on)", unit: "kg", price: 420, rating: 4.8, reviews: 132, badge: null, desc: "Skin-on belly cut, evenly layered — perfect for roasting or slow braising.", images: [img("porkbelly1", 700, 860), img("porkbelly2", 700, 860)] },
-  { id: "p10", name: "Smoked Pork", unit: "500g", price: 350, rating: 4.9, reviews: 176, badge: "Naga style", desc: "Slow smoked over wood in the traditional Naga style — deep smoky flavour straight from the block.", images: [img("smokedpork1", 700, 860), img("smokedpork2", 700, 860)] },
-  { id: "p11", name: "Fresh Bamboo Shoot", unit: "250g", price: 90, rating: 4.6, reviews: 84, badge: "Seasonal", desc: "Tender seasonal bamboo shoot, cleaned and sliced, ready to cook.", images: [img("bamfresh1", 700, 860), img("bamfresh2", 700, 860)] },
-  { id: "p12", name: "Fermented Bamboo Shoot", unit: "200g", price: 120, rating: 4.7, reviews: 109, badge: "Naga style", desc: "Traditionally fermented for weeks for that distinct sharp, tangy flavour used in Naga-style curries.", images: [img("bamferm1", 700, 860), img("bamferm2", 700, 860)] },
+  { id: "p1", name: "Desi Country Chicken (Whole)", unit: "kg", price: 320, rating: 4.9, reviews: 264, badge: "Bestseller", desc: "Free-range desi chicken, cleaned and cut to order in front of you. Firmer texture and deeper flavour than broiler.", images: [img(CHICKEN_IDS[0], 700, 860), img(CHICKEN_IDS[5], 700, 860)] },
+  { id: "p2", name: "Boneless Chicken Breast", unit: "500g", price: 180, rating: 4.7, reviews: 188, badge: null, desc: "Skinless, boneless breast fillets trimmed fresh — ready straight into the pan.", images: [img(CHICKEN_IDS[3], 700, 860), img(CHICKEN_IDS[6], 700, 860)] },
+  { id: "p3", name: "Chicken Curry Cut (Skin-on)", unit: "kg", price: 240, rating: 4.8, reviews: 201, badge: null, desc: "Classic curry-style pieces, skin-on for a richer gravy. Cut to your preferred size on request.", images: [img(CHICKEN_IDS[7], 700, 860), img(CHICKEN_IDS[8], 700, 860)] },
+  { id: "p4", name: "Fresh Rohu Fish", unit: "kg", price: 260, rating: 4.7, reviews: 142, badge: "Fresh catch", desc: "Sourced daily from the local market, scaled and cleaned before it leaves our counter.", images: [img(FISH_IDS[0], 700, 860), img(FISH_IDS[5], 700, 860)] },
+  { id: "p5", name: "Pomfret (Silver)", unit: "kg", price: 650, rating: 4.8, reviews: 96, badge: "Fresh catch", desc: "Whole silver pomfret, firm-fleshed and mild — ideal for frying or steaming.", images: [img(FISH_IDS[1], 700, 860), img(FISH_IDS[6], 700, 860)] },
+  { id: "p6", name: "Mutton Curry Cut (Bone-in)", unit: "kg", price: 780, rating: 4.9, reviews: 231, badge: "Bestseller", desc: "Traditional bone-in curry cut for slow-cooked gravies with real depth of flavour.", images: [img(MUTTON_IDS[0], 700, 860), img(MUTTON_IDS[4], 700, 860)] },
+  { id: "p7", name: "Mutton Boneless", unit: "500g", price: 480, rating: 4.7, reviews: 118, badge: null, desc: "Hand-trimmed boneless mutton, ideal for kebabs, roasts or quick stir-fries.", images: [img(MUTTON_IDS[1], 700, 860), img(MUTTON_IDS[5], 700, 860)] },
+  { id: "p8", name: "Pork Curry Cut", unit: "kg", price: 380, rating: 4.8, reviews: 154, badge: null, desc: "Classic curry-cut pork with a good fat-to-meat ratio for slow-cooked dishes.", images: [img(PORK_IDS[0], 700, 860), img(PORK_IDS[3], 700, 860)] },
+  { id: "p9", name: "Pork Belly (Skin-on)", unit: "kg", price: 420, rating: 4.8, reviews: 132, badge: null, desc: "Skin-on belly cut, evenly layered — perfect for roasting or slow braising.", images: [img(PORK_IDS[1], 700, 860), img(PORK_IDS[4], 700, 860)] },
+  { id: "p10", name: "Smoked Pork", unit: "500g", price: 350, rating: 4.9, reviews: 176, badge: "Naga style", desc: "Slow smoked over wood in the traditional Naga style — deep smoky flavour straight from the block.", images: [img(PORK_IDS[2], 700, 860), img(PORK_IDS[5], 700, 860)] },
+  { id: "p11", name: "Fresh Bamboo Shoot", unit: "250g", price: 90, rating: 4.6, reviews: 84, badge: "Seasonal", desc: "Tender seasonal bamboo shoot, cleaned and sliced, ready to cook.", images: [img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[1], 700, 860)] },
+  { id: "p12", name: "Fermented Bamboo Shoot", unit: "200g", price: 120, rating: 4.7, reviews: 109, badge: "Naga style", desc: "Traditionally fermented for weeks for that distinct sharp, tangy flavour used in Naga-style curries.", images: [img(BAMBOO_IDS[2], 700, 860), img(BAMBOO_IDS[3], 700, 860)] },
 ];
 
 const TESTIMONIALS = [
@@ -977,8 +1038,8 @@ function FeaturedProducts({ cart, onInc, onDec, onQuickView }) {
           {loading
             ? Array.from({ length: 8 }).map((_, i) => <ProductCardSkeleton key={i} />)
             : PRODUCTS.map((product, i) => (
-                <ProductCard key={product.id} product={product} index={i} qty={cart[product.id] || 0} onInc={onInc} onDec={onDec} onQuickView={onQuickView} />
-              ))}
+              <ProductCard key={product.id} product={product} index={i} qty={cart[product.id] || 0} onInc={onInc} onDec={onDec} onQuickView={onQuickView} />
+            ))}
         </div>
       </div>
     </section>
@@ -1132,11 +1193,20 @@ function VisitUs({ onContact }) {
         <Reveal delay={150}>
           <TiltCard maxTilt={5} className="rounded-2xl overflow-hidden shadow-2xl">
             <div className="relative">
-              <img src={img("mapview", 900, 700)} alt="Neighbourhood near the shop" className="w-full h-80 object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 bg-white/10 backdrop-blur rounded-xl p-3">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.5583222705764!2d73.89711997496224!3d18.493783582594546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1007fb18299%3A0x7e8c29c9a7daf480!2sParmar%20Park%20Phase%202!5e1!3m2!1sen!2sin!4v1783087464062!5m2!1sen!2sin"
+                className="w-full h-80 rounded-xl border-0"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map"
+              />
+
+              <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 bg-black/50 backdrop-blur rounded-xl p-3">
                 <Navigation className="w-5 h-5 text-[var(--accent)] shrink-0" />
-                <p className="text-xs text-white/90 leading-snug">{BIZ.address}</p>
+                <p className="text-xs text-white">
+                  {BIZ.address}
+                </p>
               </div>
             </div>
           </TiltCard>
