@@ -34,6 +34,21 @@ import {
 } from "lucide-react";
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import baamboo1 from "./assets/Images/baamboo1.jpg";
+import baamboo2 from "./assets/Images/baamboo2.jpg";
+import baamboo3 from "./assets/Images/baamboo3.jpg";
+import baamboo4 from "./assets/Images/baamboo4.jpg";
+import baamboo5 from "./assets/Images/baamboo5.jpg";
+import baamboo6 from "./assets/Images/baamboo6.jpg";
+import baamboo7 from "./assets/Images/baamboo7.jpg";
+import chikenleg from "./assets/Images/chikenleg.jpg";
+import drum from "./assets/Images/drum.jpg";
+import wings from "./assets/Images/wings.jpg";
+import liver from "./assets/Images/liver.jpg";
+
+
+
+
 /* ------------------------------------------------------------------ */
 /*  BUSINESS INFO                                                      */
 /* ------------------------------------------------------------------ */
@@ -138,12 +153,12 @@ const PRODUCTS = [
   { id: "p1", name: "Desi Country Chicken (Whole)", unit: "kg", price: 320, rating: 4.9, reviews: 264, badge: "Bestseller", desc: "Free-range desi chicken, cleaned and cut to order in front of you. Firmer texture and deeper flavour than broiler.", images: [img(CHICKEN_IDS[0], 700, 860), img(CHICKEN_IDS[5], 700, 860)] },
   { id: "p2", name: "Boneless Chicken Breast", unit: "500g", price: 180, rating: 4.7, reviews: 188, badge: null, desc: "Skinless, boneless breast fillets trimmed fresh — ready straight into the pan.", images: [img(CHICKEN_IDS[3], 700, 860), img(CHICKEN_IDS[6], 700, 860)] },
   { id: "p3", name: "Chicken Curry Cut (Skin-on)", unit: "kg", price: 240, rating: 4.8, reviews: 201, badge: null, desc: "Classic curry-style pieces, skin-on for a richer gravy. Cut to your preferred size on request.", images: [img(CHICKEN_IDS[7], 700, 860), img(CHICKEN_IDS[8], 700, 860)] },
-  { id: "p13", name: "Chicken Leg Piece", unit: "kg", price: 260, rating: 4.8, reviews: 176, badge: "Bestseller", desc: "Juicy whole leg pieces (thigh + drumstick), skin-on, perfect for roasting, frying or grilling.", images: [img(CHICKEN_IDS[1], 700, 860), img(CHICKEN_IDS[4], 700, 860)] },
-  { id: "p14", name: "Chicken Drumstick", unit: "500g", price: 150, rating: 4.7, reviews: 122, badge: null, desc: "Fresh drumsticks, evenly sized and cleaned — a favourite for kids and quick fries.", images: [img(CHICKEN_IDS[2], 700, 860), img(CHICKEN_IDS[8], 700, 860)] },
+  { id: "p13", name: "Chicken Leg Piece", unit: "kg", price: 260, rating: 4.8, reviews: 176, badge: "Bestseller", desc: "Juicy whole leg pieces (thigh + drumstick), skin-on, perfect for roasting, frying or grilling.", images: [chikenleg] },
+  { id: "p14", name: "Chicken Drumstick", unit: "500g", price: 150, rating: 4.7, reviews: 122, badge: null, desc: "Fresh drumsticks, evenly sized and cleaned — a favourite for kids and quick fries.", images: [drum] },
   // { id: "p15", name: "Chicken Keema (Mince)", unit: "500g", price: 200, rating: 4.8, reviews: 149, badge: "Popular", desc: "Freshly minced chicken, ground to order — ideal for kebabs, cutlets and keema curry.", images: [img(CHICKEN_IDS[6], 700, 860), img(CHICKEN_IDS[3], 700, 860)] },
-  { id: "p16", name: "Chicken Wings", unit: "500g", price: 160, rating: 4.6, reviews: 98, badge: null, desc: "Plump whole wings, great for frying, grilling or tossing in a spicy glaze.", images: [img(CHICKEN_IDS[7], 700, 860), img(CHICKEN_IDS[0], 700, 860)] },
+  { id: "p16", name: "Chicken Wings", unit: "500g", price: 160, rating: 4.6, reviews: 98, badge: null, desc: "Plump whole wings, great for frying, grilling or tossing in a spicy glaze.", images: [wings] },
   { id: "p17", name: "Whole Chicken (Skinless)", unit: "kg", price: 220, rating: 4.7, reviews: 134, badge: null, desc: "Whole broiler chicken, skin removed and cleaned — cut into your choice of pieces.", images: [img(CHICKEN_IDS[5], 700, 860), img(CHICKEN_IDS[1], 700, 860)] },
-  { id: "p18", name: "Chicken Liver", unit: "250g", price: 90, rating: 4.5, reviews: 61, badge: null, desc: "Fresh, cleaned chicken liver — quick to cook, rich in flavour.", images: [img(CHICKEN_IDS[8], 700, 860), img(CHICKEN_IDS[2], 700, 860)] },
+  { id: "p18", name: "Chicken Liver", unit: "250g", price: 90, rating: 4.5, reviews: 61, badge: null, desc: "Fresh, cleaned chicken liver — quick to cook, rich in flavour.", images: [liver] },
 
   // ---------------- FISH ----------------
   { id: "p4", name: "Fresh Rohu Fish", unit: "kg", price: 260, rating: 4.7, reviews: 142, badge: "Fresh catch", desc: "Sourced daily from the local market, scaled and cleaned before it leaves our counter.", images: [img(FISH_IDS[0], 700, 860), img(FISH_IDS[5], 700, 860)] },
@@ -163,12 +178,65 @@ const PRODUCTS = [
 
 
     // ---------------- BAMBOO SHOOT ----------------
-  { id: "p11", name: "Fresh Bamboo Shoot", unit: "250g", price: 90, rating: 4.6, reviews: 84, badge: "Seasonal", desc: "Tender seasonal bamboo shoot, cleaned and sliced, ready to cook.", images: [img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[1], 700, 860), img(BAMBOO_IDS[4], 700, 860)] },
-  { id: "p12", name: "Fermented Bamboo Shoot", unit: "200g", price: 120, rating: 4.7, reviews: 109, badge: "Naga style", desc: "Traditionally fermented for weeks for that distinct sharp, tangy flavour used in Naga-style curries.", images: [img(BAMBOO_IDS[2], 700, 860), img(BAMBOO_IDS[3], 700, 860), img(BAMBOO_IDS[5], 700, 860)] },
-  { id: "p30", name: "Boiled Bamboo Shoot (Ready-to-cook)", unit: "300g", price: 100, rating: 4.6, reviews: 67, badge: null, desc: "Pre-boiled and sliced bamboo shoot — saves prep time, straight into your curry or stir-fry.", images: [img(BAMBOO_IDS[1], 700, 860), img(BAMBOO_IDS[2], 700, 860), img(BAMBOO_IDS[6], 700, 860)] },
-  { id: "p31", name: "Bamboo Shoot Pickle", unit: "200g", price: 140, rating: 4.8, reviews: 92, badge: "Naga style", desc: "Tangy, spicy homemade bamboo shoot pickle — a Naga-kitchen staple alongside any meal.", images: [img(BAMBOO_IDS[3], 700, 860), img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[4], 700, 860)] },
-  { id: "p34", name: "Premium Fermented Bamboo Shoot (Aged)", unit: "250g", price: 190, rating: 4.9, reviews: 58, badge: "Premium", desc: "Extra-aged small-batch fermented bamboo shoot with a deeper, sharper flavour — for connoisseurs of authentic Naga cooking.", images: [img(BAMBOO_IDS[5], 700, 860), img(BAMBOO_IDS[6], 700, 860), img(BAMBOO_IDS[2], 700, 860)] },
+{
+  id: "p11",
+  name: "Fresh Bamboo Shoot",
+  unit: "250g",
+  price: 250,
+  rating: 4.6,
+  reviews: 84,
+  badge: "Seasonal",
+  desc: "Tender seasonal bamboo shoot, cleaned and sliced, ready to cook.",
+  images: [baamboo1, baamboo2, baamboo3],
+},
 
+{
+  id: "p12",
+  name: "Fermented Bamboo Shoot",
+  unit: "500g",
+  price: 500,
+  rating: 4.7,
+  reviews: 109,
+  badge: "Naga style",
+  desc: "Traditionally fermented for weeks for that distinct sharp, tangy flavour used in Naga-style curries.",
+  images: [baamboo4, baamboo5, baamboo6],
+},
+
+{
+  id: "p30",
+  name: "Boiled Bamboo Shoot (Ready-to-cook)",
+  unit: "500g",
+  price: 700,
+  rating: 4.6,
+  reviews: 67,
+  badge: null,
+  desc: "Pre-boiled and sliced bamboo shoot — saves prep time, straight into your curry or stir-fry.",
+  images: [baamboo2, baamboo3, baamboo7],
+},
+
+{
+  id: "p31",
+  name: "Bamboo Shoot Pickle",
+  unit: "750g",
+  price: 700,
+  rating: 4.8,
+  reviews: 92,
+  badge: "Naga style",
+  desc: "Tangy, spicy homemade bamboo shoot pickle.",
+  images: [baamboo5, baamboo1, baamboo6],
+},
+
+{
+  id: "p34",
+  name: "Premium Fermented Bamboo Shoot (Aged)",
+  unit: "1kg",
+  price: 900,
+  rating: 4.9,
+  reviews: 58,
+  badge: "Premium",
+  desc: "Extra-aged fermented bamboo shoot with authentic Naga flavour.",
+  images: [baamboo6, baamboo7, baamboo4],
+},
   // ---------------- PORK ----------------
   { id: "p8", name: "Pork Curry Cut", unit: "kg", price: 380, rating: 4.8, reviews: 154, badge: null, desc: "Classic curry-cut pork with a good fat-to-meat ratio for slow-cooked dishes.", images: [img(PORK_IDS[0], 700, 860), img(PORK_IDS[3], 700, 860)] },
   // { id: "p9", name: "Pork Belly (Skin-on)", unit: "kg", price: 420, rating: 4.8, reviews: 132, badge: null, desc: "Skin-on belly cut, evenly layered — perfect for roasting or slow braising.", images: [img(PORK_IDS[1], 700, 860), img(PORK_IDS[4], 700, 860)] },
