@@ -106,19 +106,22 @@ const BAMBOO_IDS = [
   "1724429427088-aa44f2e867a0",
   "1684322378272-383f146e2e73",
   "1758202416825-666ace6d2241",
+  "1764516523912-df5cba96d5b6",
+  "1691053803737-7fbe52f5d70e",
+  "1680612768519-b48fae346288",
 ];
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
 /* ------------------------------------------------------------------ */
 
-
 const CATEGORIES = [
-  { id: "chicken", name: "Chicken", count: "18 cuts available", images: [img(CHICKEN_IDS[0], 700, 860), img(CHICKEN_IDS[1], 700, 860), img(CHICKEN_IDS[2], 700, 860)] },
-  { id: "fish", name: "Fish", count: "22 varieties", images: [img(FISH_IDS[0], 700, 860), img(FISH_IDS[1], 700, 860), img(FISH_IDS[2], 700, 860)] },
-  { id: "mutton", name: "Mutton", count: "14 cuts available", images: [img(MUTTON_IDS[0], 700, 860), img(MUTTON_IDS[1], 700, 860)] },
-  { id: "pork", name: "Pork", count: "12 cuts available", images: [img(PORK_IDS[0], 700, 860), img(PORK_IDS[1], 700, 860)] },
-  { id: "bamboo", name: "Bamboo Shoot", count: "6 varieties", images: [img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[1], 700, 860)] },
+  { id: "chicken", name: "Chicken", count: "24 cuts available", images: [img(CHICKEN_IDS[0], 700, 860), img(CHICKEN_IDS[1], 700, 860), img(CHICKEN_IDS[2], 700, 860)] },
+  { id: "fish", name: "Fish", count: "26 varieties", images: [img(FISH_IDS[0], 700, 860), img(FISH_IDS[1], 700, 860), img(FISH_IDS[2], 700, 860)] },
+  { id: "mutton", name: "Mutton", count: "18 cuts available", images: [img(MUTTON_IDS[0], 700, 860), img(MUTTON_IDS[1], 700, 860)] },
+  { id: "bamboo", name: "Bamboo Shoot", count: "10 varieties", images: [img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[1], 700, 860), img(BAMBOO_IDS[4], 700, 860)] },
+  { id: "pork", name: "Pork", count: "16 cuts available", images: [img(PORK_IDS[0], 700, 860), img(PORK_IDS[1], 700, 860)] },
+  { id: "eggs", name: "Eggs", count: "4 varieties", images: [img(CHICKEN_IDS[4], 700, 860), img(CHICKEN_IDS[5], 700, 860)] },
 ];
 
 const GALLERY = [
@@ -126,20 +129,53 @@ const GALLERY = [
   img(MUTTON_IDS[2], 900, 1100), img(PORK_IDS[2], 900, 1100),
   img(CHICKEN_IDS[4], 900, 1100), img(FISH_IDS[4], 900, 1100),
   img(BAMBOO_IDS[2], 900, 1100), img(MUTTON_IDS[3], 900, 1100),
+  img(PORK_IDS[3], 900, 1100), img(CHICKEN_IDS[6], 900, 1100),
+  img(FISH_IDS[7], 900, 1100), img(MUTTON_IDS[6], 900, 1100),
 ];
+
 const PRODUCTS = [
+  // ---------------- CHICKEN ----------------
   { id: "p1", name: "Desi Country Chicken (Whole)", unit: "kg", price: 320, rating: 4.9, reviews: 264, badge: "Bestseller", desc: "Free-range desi chicken, cleaned and cut to order in front of you. Firmer texture and deeper flavour than broiler.", images: [img(CHICKEN_IDS[0], 700, 860), img(CHICKEN_IDS[5], 700, 860)] },
   { id: "p2", name: "Boneless Chicken Breast", unit: "500g", price: 180, rating: 4.7, reviews: 188, badge: null, desc: "Skinless, boneless breast fillets trimmed fresh — ready straight into the pan.", images: [img(CHICKEN_IDS[3], 700, 860), img(CHICKEN_IDS[6], 700, 860)] },
   { id: "p3", name: "Chicken Curry Cut (Skin-on)", unit: "kg", price: 240, rating: 4.8, reviews: 201, badge: null, desc: "Classic curry-style pieces, skin-on for a richer gravy. Cut to your preferred size on request.", images: [img(CHICKEN_IDS[7], 700, 860), img(CHICKEN_IDS[8], 700, 860)] },
+  { id: "p13", name: "Chicken Leg Piece", unit: "kg", price: 260, rating: 4.8, reviews: 176, badge: "Bestseller", desc: "Juicy whole leg pieces (thigh + drumstick), skin-on, perfect for roasting, frying or grilling.", images: [img(CHICKEN_IDS[1], 700, 860), img(CHICKEN_IDS[4], 700, 860)] },
+  { id: "p14", name: "Chicken Drumstick", unit: "500g", price: 150, rating: 4.7, reviews: 122, badge: null, desc: "Fresh drumsticks, evenly sized and cleaned — a favourite for kids and quick fries.", images: [img(CHICKEN_IDS[2], 700, 860), img(CHICKEN_IDS[8], 700, 860)] },
+  // { id: "p15", name: "Chicken Keema (Mince)", unit: "500g", price: 200, rating: 4.8, reviews: 149, badge: "Popular", desc: "Freshly minced chicken, ground to order — ideal for kebabs, cutlets and keema curry.", images: [img(CHICKEN_IDS[6], 700, 860), img(CHICKEN_IDS[3], 700, 860)] },
+  { id: "p16", name: "Chicken Wings", unit: "500g", price: 160, rating: 4.6, reviews: 98, badge: null, desc: "Plump whole wings, great for frying, grilling or tossing in a spicy glaze.", images: [img(CHICKEN_IDS[7], 700, 860), img(CHICKEN_IDS[0], 700, 860)] },
+  { id: "p17", name: "Whole Chicken (Skinless)", unit: "kg", price: 220, rating: 4.7, reviews: 134, badge: null, desc: "Whole broiler chicken, skin removed and cleaned — cut into your choice of pieces.", images: [img(CHICKEN_IDS[5], 700, 860), img(CHICKEN_IDS[1], 700, 860)] },
+  { id: "p18", name: "Chicken Liver", unit: "250g", price: 90, rating: 4.5, reviews: 61, badge: null, desc: "Fresh, cleaned chicken liver — quick to cook, rich in flavour.", images: [img(CHICKEN_IDS[8], 700, 860), img(CHICKEN_IDS[2], 700, 860)] },
+
+  // ---------------- FISH ----------------
   { id: "p4", name: "Fresh Rohu Fish", unit: "kg", price: 260, rating: 4.7, reviews: 142, badge: "Fresh catch", desc: "Sourced daily from the local market, scaled and cleaned before it leaves our counter.", images: [img(FISH_IDS[0], 700, 860), img(FISH_IDS[5], 700, 860)] },
   { id: "p5", name: "Pomfret (Silver)", unit: "kg", price: 650, rating: 4.8, reviews: 96, badge: "Fresh catch", desc: "Whole silver pomfret, firm-fleshed and mild — ideal for frying or steaming.", images: [img(FISH_IDS[1], 700, 860), img(FISH_IDS[6], 700, 860)] },
+  { id: "p19", name: "Katla Fish", unit: "kg", price: 240, rating: 4.6, reviews: 88, badge: null, desc: "Fresh katla, cleaned and cut into steaks or curry-size pieces as you prefer.", images: [img(FISH_IDS[2], 700, 860), img(FISH_IDS[7], 700, 860)] },
+  { id: "p20", name: "Prawns (Jhinga)", unit: "500g", price: 420, rating: 4.9, reviews: 167, badge: "Bestseller", desc: "Deveined, cleaned prawns — medium size, ready to cook straight from the pack.", images: [img(FISH_IDS[3], 700, 860), img(FISH_IDS[8], 700, 860)] },
+  { id: "p21", name: "Hilsa Fish (Ilish)", unit: "kg", price: 900, rating: 4.9, reviews: 74, badge: "Premium", desc: "Seasonal hilsa, prized for its rich flavour — cut and cleaned to order.", images: [img(FISH_IDS[4], 700, 860), img(FISH_IDS[9], 700, 860)] },
+  // { id: "p22", name: "Dried Fish (Naga Style)", unit: "200g", price: 180, rating: 4.7, reviews: 103, badge: "Naga style", desc: "Sun-dried fish prepared the traditional way, packed with smoky, intense flavour for Naga curries and chutneys.", images: [img(FISH_IDS[9], 700, 860), img(FISH_IDS[6], 700, 860)] },
+
+  // ---------------- MUTTON ----------------
   { id: "p6", name: "Mutton Curry Cut (Bone-in)", unit: "kg", price: 780, rating: 4.9, reviews: 231, badge: "Bestseller", desc: "Traditional bone-in curry cut for slow-cooked gravies with real depth of flavour.", images: [img(MUTTON_IDS[0], 700, 860), img(MUTTON_IDS[4], 700, 860)] },
   { id: "p7", name: "Mutton Boneless", unit: "500g", price: 480, rating: 4.7, reviews: 118, badge: null, desc: "Hand-trimmed boneless mutton, ideal for kebabs, roasts or quick stir-fries.", images: [img(MUTTON_IDS[1], 700, 860), img(MUTTON_IDS[5], 700, 860)] },
+  { id: "p23", name: "Mutton Bone", unit: "500g", price: 460, rating: 4.8, reviews: 141, badge: "Popular", desc: "Freshly ground mutton mince — perfect for keema curry, kebabs and koftas.", images: [img(MUTTON_IDS[2], 700, 860), img(MUTTON_IDS[6], 700, 860)] },
+  { id: "p24", name: "Mutton Keema(Mince)", unit: "500g", price: 520, rating: 4.8, reviews: 112, badge: null, desc: "Rib chops cut to even thickness, great for grilling or pan-searing.", images: [img(MUTTON_IDS[3], 700, 860), img(MUTTON_IDS[0], 700, 860)] },
+  { id: "p25", name: "Mutton Chops", unit: "250g", price: 220, rating: 4.5, reviews: 115, badge: null, desc: "Fresh mutton liver, cleaned and ready — a Naga-kitchen favourite stir-fried with local herbs.", images: [img(MUTTON_IDS[4], 700, 860), img(MUTTON_IDS[1], 700, 860)] },
+  // { id: "p26", name: "Mutton Boti (Cubed)", unit: "500g", price: 500, rating: 4.7, reviews: 96, badge: null, desc: "Evenly cubed mutton pieces, ready for skewers, kebabs or slow braises.", images: [img(MUTTON_IDS[5], 700, 860), img(MUTTON_IDS[2], 700, 860)] },
+
+
+    // ---------------- BAMBOO SHOOT ----------------
+  { id: "p11", name: "Fresh Bamboo Shoot", unit: "250g", price: 90, rating: 4.6, reviews: 84, badge: "Seasonal", desc: "Tender seasonal bamboo shoot, cleaned and sliced, ready to cook.", images: [img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[1], 700, 860), img(BAMBOO_IDS[4], 700, 860)] },
+  { id: "p12", name: "Fermented Bamboo Shoot", unit: "200g", price: 120, rating: 4.7, reviews: 109, badge: "Naga style", desc: "Traditionally fermented for weeks for that distinct sharp, tangy flavour used in Naga-style curries.", images: [img(BAMBOO_IDS[2], 700, 860), img(BAMBOO_IDS[3], 700, 860), img(BAMBOO_IDS[5], 700, 860)] },
+  { id: "p30", name: "Boiled Bamboo Shoot (Ready-to-cook)", unit: "300g", price: 100, rating: 4.6, reviews: 67, badge: null, desc: "Pre-boiled and sliced bamboo shoot — saves prep time, straight into your curry or stir-fry.", images: [img(BAMBOO_IDS[1], 700, 860), img(BAMBOO_IDS[2], 700, 860), img(BAMBOO_IDS[6], 700, 860)] },
+  { id: "p31", name: "Bamboo Shoot Pickle", unit: "200g", price: 140, rating: 4.8, reviews: 92, badge: "Naga style", desc: "Tangy, spicy homemade bamboo shoot pickle — a Naga-kitchen staple alongside any meal.", images: [img(BAMBOO_IDS[3], 700, 860), img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[4], 700, 860)] },
+  { id: "p34", name: "Premium Fermented Bamboo Shoot (Aged)", unit: "250g", price: 190, rating: 4.9, reviews: 58, badge: "Premium", desc: "Extra-aged small-batch fermented bamboo shoot with a deeper, sharper flavour — for connoisseurs of authentic Naga cooking.", images: [img(BAMBOO_IDS[5], 700, 860), img(BAMBOO_IDS[6], 700, 860), img(BAMBOO_IDS[2], 700, 860)] },
+
+  // ---------------- PORK ----------------
   { id: "p8", name: "Pork Curry Cut", unit: "kg", price: 380, rating: 4.8, reviews: 154, badge: null, desc: "Classic curry-cut pork with a good fat-to-meat ratio for slow-cooked dishes.", images: [img(PORK_IDS[0], 700, 860), img(PORK_IDS[3], 700, 860)] },
-  { id: "p9", name: "Pork Belly (Skin-on)", unit: "kg", price: 420, rating: 4.8, reviews: 132, badge: null, desc: "Skin-on belly cut, evenly layered — perfect for roasting or slow braising.", images: [img(PORK_IDS[1], 700, 860), img(PORK_IDS[4], 700, 860)] },
+  // { id: "p9", name: "Pork Belly (Skin-on)", unit: "kg", price: 420, rating: 4.8, reviews: 132, badge: null, desc: "Skin-on belly cut, evenly layered — perfect for roasting or slow braising.", images: [img(PORK_IDS[1], 700, 860), img(PORK_IDS[4], 700, 860)] },
   { id: "p10", name: "Smoked Pork", unit: "500g", price: 350, rating: 4.9, reviews: 176, badge: "Naga style", desc: "Slow smoked over wood in the traditional Naga style — deep smoky flavour straight from the block.", images: [img(PORK_IDS[2], 700, 860), img(PORK_IDS[5], 700, 860)] },
-  { id: "p11", name: "Fresh Bamboo Shoot", unit: "250g", price: 90, rating: 4.6, reviews: 84, badge: "Seasonal", desc: "Tender seasonal bamboo shoot, cleaned and sliced, ready to cook.", images: [img(BAMBOO_IDS[0], 700, 860), img(BAMBOO_IDS[1], 700, 860)] },
-  { id: "p12", name: "Fermented Bamboo Shoot", unit: "200g", price: 120, rating: 4.7, reviews: 109, badge: "Naga style", desc: "Traditionally fermented for weeks for that distinct sharp, tangy flavour used in Naga-style curries.", images: [img(BAMBOO_IDS[2], 700, 860), img(BAMBOO_IDS[3], 700, 860)] },
+  { id: "p27", name: "Pork Ribs", unit: "kg", price: 440, rating: 4.8, reviews: 121, badge: null, desc: "Meaty rib racks, cut to size — great for slow-roasting or grilling.", images: [img(PORK_IDS[3], 700, 860), img(PORK_IDS[0], 700, 860)] },
+  { id: "p28", name: "Pork Sausage (Homemade)", unit: "500g", price: 320, rating: 4.7, reviews: 87, badge: "Popular", desc: "Coarsely ground homemade pork sausage, lightly spiced — pan-fry or grill.", images: [img(PORK_IDS[4], 700, 860), img(PORK_IDS[1], 700, 860)] },
+  { id: "p29", name: "Dried Pork (Naga Style)", unit: "250g", price: 280, rating: 4.8, reviews: 105, badge: "Naga style", desc: "Air-dried pork prepared the traditional Naga way, concentrated smoky flavour for curries.", images: [img(PORK_IDS[5], 700, 860), img(PORK_IDS[2], 700, 860)] },
 ];
 
 const TESTIMONIALS = [
@@ -148,6 +184,8 @@ const TESTIMONIALS = [
   { name: "Sanju Rai", city: "Parmar Park Phase 2", initials: "SR", rating: 5, quote: "The pomfret is always properly fresh, never that frozen smell. WhatsApp ordering makes it so easy." },
   { name: "Deepika Chettri", city: "Wanwadi", initials: "DC", rating: 4, quote: "Good weight, honest pricing, and the country chicken tastes noticeably different from broiler." },
   { name: "Yaruingam Newmai", city: "Parmar Park", initials: "YN", rating: 5, quote: "Bought the fresh bamboo shoot and pork belly together — both were exactly what I needed for the weekend cooking." },
+  { name: "Vikas Thapa", city: "Wanwadi", initials: "VT", rating: 5, quote: "Ordered chicken keema and leg pieces together, both were fresh and cut exactly to size. Delivery was quick too." },
+  { name: "Alenla Jamir", city: "Parmar Park Phase 2", initials: "AJ", rating: 5, quote: "The dried fish and bamboo shoot pickle taste just like home. So glad this place exists nearby." },
 ];
 
 const FAQS = [
@@ -155,6 +193,7 @@ const FAQS = [
   { q: "Do you cut the meat to order?", a: "Yes — every order is cut fresh at the counter. Tell us your preferred cut and piece size when you call or message us." },
   { q: "Is the fish fresh or frozen?", a: "Fresh, sourced daily from the local market. Nothing is frozen unless it's a specifically dried or smoked item." },
   { q: "What's the difference between fresh and fermented bamboo shoot?", a: "Fresh bamboo shoot is mild and used like a vegetable; fermented bamboo shoot is aged for weeks for the sharp, tangy flavour used in traditional Naga-style curries. We keep both depending on season." },
+  { q: "Do you make chicken or mutton keema fresh?", a: "Yes, keema (mince) is ground fresh to order for both chicken and mutton — nothing pre-packed or sitting out." },
   { q: "How do I place an order?", a: "Call us, message on WhatsApp, or add items here and send your order straight from the cart. Same-day delivery for orders before the daily cutoff." },
 ];
 
@@ -164,7 +203,6 @@ const PROCESS_STEPS = [
   { icon: Snowflake, title: "Ice-packed", sub: "Sealed cold for the ride over" },
   { icon: Truck, title: "Delivered", sub: "Straight to your door, same day" },
 ];
-
 /* ------------------------------------------------------------------ */
 /*  HOOKS & SMALL UTILITIES                                            */
 /* ------------------------------------------------------------------ */
@@ -719,47 +757,72 @@ function Hero({ onShop, onContact }) {
 
   return (
     <section id="top" className="relative bg-[#141212] text-white overflow-hidden">
-      <div className="absolute inset-0 knife-cut bg-gradient-to-br from-black via-[#161211] to-[#2a0d09]" />
-      <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[var(--accent)]/20 blur-3xl animate-[floatY_9s_ease-in-out_infinite]" />
-      <div className="absolute top-1/3 -right-16 w-72 h-72 rounded-full bg-[var(--accent-gold)]/10 blur-3xl animate-[floatY_11s_ease-in-out_infinite_reverse]" />
+      {/* Background photo layer */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1690983322025-aab4f95a0269?w=1800&h=1400&fit=crop&crop=entropy&auto=format&q=80"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover animate-[kenBurns_24s_ease-in-out_infinite_alternate]"
+          style={{ transform: "scale(1.05)" }}
+        />
+        {/* Warm terracotta duotone tint — ties the photo to the accent palette instead of a flat black fade */}
+        <div className="absolute inset-0 bg-[#2a0d09] mix-blend-multiply opacity-50" />
+        {/* Directional readability gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/45 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141212] via-transparent to-black/30" />
+        {/* Fine film-grain texture for a less "flat gradient" premium feel */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.06] mix-blend-overlay" xmlns="http://www.w3.org/2000/svg">
+          <filter id="heroGrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" /></filter>
+          <rect width="100%" height="100%" filter="url(#heroGrain)" />
+        </svg>
+      </div>
+
+      <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[var(--accent)]/25 blur-3xl animate-[floatY_9s_ease-in-out_infinite]" />
+      <div className="absolute top-1/3 -right-16 w-72 h-72 rounded-full bg-[var(--accent-gold)]/15 blur-3xl animate-[floatY_11s_ease-in-out_infinite_reverse]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-16 pb-28 sm:pt-24 sm:pb-36 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1 text-xs font-bold text-white/80 mb-6">
-              <Sparkles className="w-3.5 h-3.5 text-[var(--accent)]" /> Cut fresh, delivered same day
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 backdrop-blur-md px-3 py-1.5 text-xs font-bold tracking-wide text-white/85 mb-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)]">
+              <Sparkles className="w-3.5 h-3.5 text-[var(--accent-gold)]" /> Cut fresh, delivered same day
             </span>
           </Reveal>
 
           <Reveal delay={100}>
-            <h1 className="text-[40px] leading-[46px] sm:text-[56px] sm:leading-[62px] font-bold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+            <h1 className="text-[40px] leading-[46px] sm:text-[58px] sm:leading-[64px] font-bold tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.6)]" style={{ fontFamily: "var(--font-display)" }}>
               Fresh meat &amp; fish,
               <br />
               cut <span className="text-[var(--accent)]">exactly your way.</span>
             </h1>
+            {/* Signature accent rule — a small deliberate detail rather than decoration */}
+            <div className="mt-5 h-[3px] w-16 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent-gold)]" />
           </Reveal>
 
           <Reveal delay={200}>
-            <p className="mt-6 text-md text-white/70 max-w-md font-normal">
+            <p className="mt-6 text-md text-white/80 max-w-md font-normal">
               Chicken, fish, mutton, pork and bamboo shoot — sourced daily and prepared to order at our counter in Wanwadi, delivered straight to Parmar Park and around.
             </p>
           </Reveal>
 
           <Reveal delay={300}>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <button onClick={onShop} className="group inline-flex items-center gap-2 h-12 px-6 rounded-full bg-[var(--accent)] text-white text-sm font-bold hover:brightness-110 active:scale-95 transition-all duration-200 shadow-[0_10px_30px_-8px_rgba(232,67,44,0.6)]">
+              <button onClick={onShop} className="group inline-flex items-center gap-2 h-12 px-6 rounded-full bg-[var(--accent)] text-white text-sm font-bold hover:brightness-110 active:scale-95 transition-all duration-200 shadow-[0_12px_32px_-8px_rgba(232,67,44,0.65)]">
                 Browse the menu <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </button>
-              <a href={`tel:${BIZ.phoneTel}`} className="h-12 px-6 rounded-full border border-white/25 text-white text-sm font-bold hover:bg-white/10 transition-colors duration-200 inline-flex items-center gap-2">
+              <a href={`tel:${BIZ.phoneTel}`} className="h-12 px-6 rounded-full border border-white/30 bg-black/25 backdrop-blur-md text-white text-sm font-bold hover:bg-white/10 hover:border-white/50 transition-colors duration-200 inline-flex items-center gap-2">
                 <PhoneCall className="w-4 h-4" /> {BIZ.phoneDisplay}
               </a>
             </div>
           </Reveal>
 
           <Reveal delay={400}>
-            <div className="mt-10 flex items-center gap-6 flex-wrap">
-              {["4.8★ rated", "Cut to order", "Wanwadi & Parmar Park"].map((t) => (
-                <span key={t} className="text-xs font-semibold text-white/50">{t}</span>
+            <div className="mt-10 flex items-center gap-x-6 gap-y-2 flex-wrap">
+              {["4.8★ rated", "Cut to order", "Wanwadi & Parmar Park"].map((t, i) => (
+                <span key={t} className="flex items-center gap-6 text-xs font-semibold text-white/60">
+                  {i > 0 && <span className="w-1 h-1 rounded-full bg-white/30 -mr-6" aria-hidden="true" />}
+                  {t}
+                </span>
               ))}
             </div>
           </Reveal>
@@ -767,7 +830,8 @@ function Hero({ onShop, onContact }) {
 
         <Reveal delay={200} className="justify-self-center lg:justify-self-end w-full max-w-sm">
           <TiltCard maxTilt={6} className="rounded-2xl">
-            <div className="rounded-2xl bg-[#FCFBF8] text-[#141212] p-6 shadow-2xl">
+            <div className="relative rounded-2xl bg-[#FCFBF8]/97 backdrop-blur-md text-[#141212] p-6 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.75)] ring-1 ring-black/5 overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--accent)] to-[var(--accent-gold)]" />
               <div className="flex items-center gap-2 text-[#6b645c] text-sm font-semibold">
                 <Clock className="w-4 h-4" aria-hidden="true" /> Order within for today's delivery
               </div>
@@ -787,10 +851,17 @@ function Hero({ onShop, onContact }) {
           </TiltCard>
         </Reveal>
       </div>
+
+      {/* Add this once, globally, alongside your other keyframes (e.g. floatY) */}
+      <style>{`
+        @keyframes kenBurns {
+          0%   { transform: scale(1.05) translate(0, 0); }
+          100% { transform: scale(1.16) translate(-1.5%, -1%); }
+        }
+      `}</style>
     </section>
   );
 }
-
 /* ------------------------------------------------------------------ */
 /*  TRUST BAR + STATS                                                  */
 /* ------------------------------------------------------------------ */
